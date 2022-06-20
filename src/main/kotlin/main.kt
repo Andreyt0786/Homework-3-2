@@ -1,5 +1,5 @@
 fun main() {
-    var totalCount = 0// сумма перечислений за месяц
+    var totalCount = 600001// сумма перечислений за месяц
     val typeOfCard = "VKPay"//VKPay, "Maestro", "Mastercard", "VISA", "MIR"
     val moneyToSend = 1 // количество денег отправляемых в данный момент
     var moneyToSendDay = 0 // количество денег отправленных за день
@@ -21,13 +21,6 @@ fun textToPrint(alowToDo: Boolean, countComission: Double): String {
 fun comissionForSend(typeOfCard: String, moneyToSend: Int, totalCount: Int): Double {
     var comission: Double = 0.0
     val comissionOfVisa = moneyToSend * 0.75/100
-    //var comissionOfMaster: Double
-
-  /*  when {// Расчет комиссии для мастеркард
-        totalCount <= 75000 ->  comissionOfMaster = 0.0
-        totalCount > 75000 || moneyToSend > 75000 || totalCount + moneyToSend > 75000 -> comissionOfMaster =
-            (moneyToSend * 0.6 / 100) + 20
-    }*/
 
     when (typeOfCard) { // вывод итоговой комиссии
         "VKPay" -> comission = 0.0
