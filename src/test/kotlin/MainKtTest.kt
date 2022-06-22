@@ -174,7 +174,7 @@ fun limitsFalseMastercardTotalSendDay(){
     fun limitsVKPayfalseTotalCountMoneyToSend(){
         val typeOfCard = "VKPay"
         val moneyToSend = 12000
-        val totalCount = 3000
+        val totalCount = 30000
         val moneyToSendDay = 1
         val expected = false
         val result = limits(typeOfCard,totalCount,moneyToSendDay,moneyToSend)
